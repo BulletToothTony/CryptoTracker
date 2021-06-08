@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 250px;
+}
+
+
+
+
+
+
+
+
+.logoImg {
+    max-width: 35px;
+    max-height: 35px;
+}
+
+.coinDiv {
+    border: 1px solid black;
+    width: 300px;
+}
