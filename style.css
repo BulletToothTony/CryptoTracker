@@ -44,3 +44,14 @@ h1 {
     }
 
 }
+
+@media only screen and (max-width: 2000px) {
+    body {
+        margin: 25px 350px 250px 350px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+}
