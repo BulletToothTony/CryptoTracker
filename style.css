@@ -2,11 +2,21 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 150px;
+    height: 100%;
+    margin: 25px 150px 200px 150px;
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(#d4d4d4, #9198e5);
 }
 
+h1 {
+    font-size: 3rem;
+}
 
-
+.main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
 
 
@@ -20,4 +30,12 @@ body {
 .coinDiv {
     border: 1px solid black;
     width: 300px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
+
 }
