@@ -34,16 +34,6 @@ h1 {
     text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
-    body {
-        margin: 10px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-}
 
 @media only screen and (max-width: 2000px) {
     body {
@@ -52,6 +42,17 @@ h1 {
 
     h1 {
         font-size: 3rem;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
     }
 
 }
