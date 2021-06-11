@@ -11,6 +11,19 @@
 <body>
     <h1>Crypto Tracker $</h1>
 
+    <div class="dropdown">
+        <form onsubmit="return false">
+            <label for="currency">Choose currency:</label>
+            <select name="currency" id="currencyForm">
+              <option value="usd">USD</option>
+              <option value="gbp">GBP</option>
+              <option value="eur">EURO</option>
+            </select>
+            <br><br>
+            <input id="submitForm" type="submit" value="Submit">
+          </form>
+    </div>
+
     <div class="main">
     <div class="coinDiv">
         <h2>BTC <span><img class="logoImg" id="imgsrcBTC" src="" alt="BitcoinLogo"></span></h2>

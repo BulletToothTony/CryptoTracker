@@ -1,6 +1,28 @@
 // curl -H "X-CMC_PRO_API_KEY: 3ec3adfd-4aa8-41" -H "Accept: application/json" -d "start=1&limit=5000&convert=USD" -G https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest
 // curl -H "X-CM" -H "Accept: application/json" -G https://pro-api.coinmarketcap.com/v1/cryptocurrency/map
 
+currencyForm = document.getElementById('currencyForm');
+submitForm = document.getElementById('submitForm')
+var sel = document.getElementById('currencyForm')
+console.log(sel.value)
+
+submitForm.addEventListener('click', function test() {console.log(sel.value)})
+submitForm.addEventListener('click', runCurrency)
+
+function runCurrency() {
+    currentCur = sel.value;
+    btc()
+    eth()
+    ltc()
+    ada()
+    xmr()
+    doge()
+
+}
+
+let currentCur = 'usd'
+
+
 btcPrice = document.getElementById('priceBTC');
 high24BTC = document.getElementById('high24BTC');
 low24BTC = document.getElementById('low24BTC');
@@ -45,7 +67,7 @@ percent24DOGE = document.getElementById('percent24DOGE')
 
 
 async function btc(){
-    let response = await fetch("https://api.coingecko.com/api/v3/coins/markets?ids=bitcoin&vs_currency=usd")
+    let response = await fetch("https://api.coingecko.com/api/v3/coins/markets?ids=bitcoin&vs_currency=" + currentCur)
     let json = await response.json()
     console.log(json[0])
 
@@ -58,7 +80,7 @@ async function btc(){
 }
 
 async function eth() {
-    let response = await fetch("https://api.coingecko.com/api/v3/coins/markets?ids=ethereum&vs_currency=usd")
+    let response = await fetch("https://api.coingecko.com/api/v3/coins/markets?ids=ethereum&vs_currency=" + currentCur)
     let json = await response.json()
     console.log(json[0])
 
@@ -71,7 +93,7 @@ async function eth() {
 } 
 
 async function ltc() {
-    let response = await fetch("https://api.coingecko.com/api/v3/coins/markets?ids=litecoin&vs_currency=usd")
+    let response = await fetch("https://api.coingecko.com/api/v3/coins/markets?ids=litecoin&vs_currency=" + currentCur)
     let json = await response.json()
     console.log(json[0])
 
@@ -84,7 +106,7 @@ async function ltc() {
 }
 
 async function ada() {
-    let response = await fetch("https://api.coingecko.com/api/v3/coins/markets?ids=cardano&vs_currency=usd")
+    let response = await fetch("https://api.coingecko.com/api/v3/coins/markets?ids=cardano&vs_currency=" + currentCur)
     let json = await response.json()
     console.log(json[0])
 
@@ -97,7 +119,7 @@ async function ada() {
 }
 
 async function xmr() {
-    let response = await fetch("https://api.coingecko.com/api/v3/coins/markets?ids=monero&vs_currency=usd")
+    let response = await fetch("https://api.coingecko.com/api/v3/coins/markets?ids=monero&vs_currency=" + currentCur)
     let json = await response.json()
     console.log(json[0])
 
@@ -111,7 +133,7 @@ async function xmr() {
 }
 
 async function doge() {
-    let response = await fetch("https://api.coingecko.com/api/v3/coins/markets?ids=dogecoin&vs_currency=usd")
+    let response = await fetch("https://api.coingecko.com/api/v3/coins/markets?ids=dogecoin&vs_currency=" + currentCur)
     let json = await response.json()
     console.log(json[0])
 
